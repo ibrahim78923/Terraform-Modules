@@ -1,0 +1,9 @@
+module "vpc" {
+  source            = "./modules/vpc"
+  vpc_name          = "Consultancyoutfit-VPC"
+  vpc_cidr          = "192.168.10.0/24"
+  instance_tenancy  = "default"
+  public_subnet_count  = 6
+  private_subnet_count = 3
+  azs               = ["us-east-1a", "us-east-1b", "us-east-1c"]
+}
